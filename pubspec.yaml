@@ -60,7 +60,32 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
+  fonts:
+     - family: ElusiveVideo
+       fonts:
+        - asset: icons/ElusiveVideo.ttf
+
+     - family: TidalIcon
+       fonts:
+        - asset: icons/TidalIcon.ttf
+
+     - family: HomeIcon
+       fonts:
+        - asset: icons/HomeIcon.ttf
+
+     - family: NotoSans
+       fonts:
+        - asset: fonts/NotoSans-Bold.ttf
+        - asset: fonts/NotoSans-Regular.ttf
+          weight: 700
+
+     - family: KumbhSans
+       fonts:
+        - asset: fonts/KumbhSans-Bold.ttf
+        - asset: fonts/KumbhSans-Regular.ttf
+          weight: 700
+
+  #fonts:
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
