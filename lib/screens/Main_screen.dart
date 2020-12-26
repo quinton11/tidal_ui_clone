@@ -22,18 +22,8 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   final _navigatorKey = GlobalKey<NavigatorState>();
   int _activepageindex = 0;
-  int _previouspageindex = 0;
+  List _index = [0];
 
-  /*List<Destination> allDestinations = [
-    Destination(
-        HomePage.namedRoute, HomeIcon.home, Color.fromRGBO(44, 51, 49, 0)),
-    Destination(VideosScreen.namedRoute, ElusiveVideo.video,
-        Color.fromRGBO(44, 51, 49, 0)),
-    Destination(
-        ExploreScreen.namedRoute, Icons.search, Color.fromRGBO(44, 51, 49, 0)),
-    Destination(MyCollection.namedRoute, Icons.favorite_outline,
-        Color.fromRGBO(44, 51, 49, 0)),
-  ];*/
 
   List<String> _pageroutes = [
     HomePage.namedRoute,
@@ -52,10 +42,10 @@ class _MainScreenState extends State<MainScreen> {
       body: WillPopScope(
         onWillPop: () async {
           if (_navigatorKey.currentState.canPop()) {
-            
+            _index.removeAt(0);
             _navigatorKey.currentState.pop();
             setState(() {
-              
+              _activepageindex = _index[0];
             });
             return false;
           }
@@ -96,7 +86,6 @@ class _MainScreenState extends State<MainScreen> {
       ),
       backgroundColor: Colors.black,
       bottomNavigationBar: Container(
-        
         decoration: BoxDecoration(
           border: Border(
             top: BorderSide(
@@ -106,16 +95,21 @@ class _MainScreenState extends State<MainScreen> {
           ),
         ),
         child: BottomNavigationBar(
+          backgroundColor: Colors.black,
           onTap: (int index) {
             setState(() {
-              _previouspageindex = _activepageindex;
+              //_previouspageindex = _activepageindex;
               _activepageindex = index;
             });
+            _index.insert(0, _activepageindex);
             _navigatorKey.currentState.pushNamed(_pageroutes[_activepageindex]);
           },
           selectedItemColor: Color.fromRGBO(3, 252, 186, 1),
           unselectedItemColor: Color.fromRGBO(92, 88, 88, 1),
           currentIndex: _activepageindex,
+          elevation: 8.0,
+          selectedFontSize: 12.0,
+          type: BottomNavigationBarType.fixed,
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(
@@ -148,95 +142,5 @@ class _MainScreenState extends State<MainScreen> {
       ),
     );
 
-    /*return CupertinoTabScaffold( 
-      backgroundColor: Colors.black,
-      tabBar:  CupertinoTabBar(
-          inactiveColor: Color.fromRGBO(92, 88, 88, 1),
-          activeColor: Color.fromRGBO(3, 252, 186, 1),
-          backgroundColor: Colors.black,
-          border: Border(
-            top: BorderSide(
-              color: Color.fromRGBO(61, 53, 53, 1),
-              width: 0.8,
-            ),
-          ),
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(
-                HomeIcon.home,
-              ),
-              label: "Home",
-              backgroundColor: Color.fromRGBO(44, 51, 49, 0),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                ElusiveVideo.video,
-              ),
-              label: "Videos",
-              backgroundColor: Color.fromRGBO(44, 51, 49, 0),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.search,
-              ),
-              label: "Explore",
-              backgroundColor: Color.fromRGBO(44, 51, 49, 0),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.favorite_outline),
-              label: "My Collection",
-              backgroundColor: Color.fromRGBO(44, 51, 49, 0),
-            )
-          ],
-        ),
-      tabBuilder: (context, index) {
-        switch (index) {
-          case 0:
-            return CupertinoTabView(
-              builder: (context) {
-                return CupertinoPageScaffold(
-                  child: HomePage(),
-                );
-              },
-            );
-
-          case 1:
-            return CupertinoTabView(
-              builder: (context) {
-                return CupertinoPageScaffold(
-                  child: VideosScreen(),
-                );
-              },
-            );
-
-          case 2:
-            return CupertinoTabView(
-              builder: (context) {
-                return CupertinoPageScaffold(
-                  child: ExploreScreen(),
-                );
-              },
-            );
-
-          case 3:
-            return CupertinoTabView(
-              builder: (context) {
-                return CupertinoPageScaffold(
-                  child: MyCollection(),
-                );
-              },
-            );
-
-          default:
-            return CupertinoTabView(
-              builder: (context) {
-                return CupertinoPageScaffold(
-                  child: HomePage(),
-                );
-              },
-            );
-        }
-      },
-    );*/
   }
 }
