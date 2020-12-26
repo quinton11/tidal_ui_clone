@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/home_page.dart';
+import 'screens/Main_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,10 +29,8 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         fontFamily: "KumbhSans",
       ),
-      initialRoute: '',
-      routes: {
-        HomePage.namedRoute : (context) => HomePage(),
-      },
+      //initialRoute: '',
+      home: MainScreen(),
 
     );
   }
