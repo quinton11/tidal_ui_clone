@@ -1,20 +1,30 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
+import '../widgets/scroll_section.dart';
 
+//import '../providers/album_data.dart';
+
+
+//List albums = ;
+
+class HomePage extends StatelessWidget {
   static const String namedRoute = '/';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-          child: Text(
-            "HomePage",
-            style: TextStyle(
-              color: Colors.white,
-            ),
+      backgroundColor: Colors.black,
+      body: Container(
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              ScrollSection(title: "Suggested New Albums",),
+              ScrollSection(title: "Popular Playlists",),
+              ScrollSection(title: "Popular Albums",),
+              ScrollSection(title: "In Memoriam",),
+            ],
           ),
         ),
-        backgroundColor: Colors.black,
+      ),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+//import 'package:flutter/services.dart';
 //import 'package:custom_navigator/custom_navigation.dart';
 
 //import '../widgets/bottom_navbar.dart';
@@ -24,7 +25,6 @@ class _MainScreenState extends State<MainScreen> {
   int _activepageindex = 0;
   List _index = [0];
 
-
   List<String> _pageroutes = [
     HomePage.namedRoute,
     VideosScreen.namedRoute,
@@ -35,6 +35,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(0, 0, 0, 0),
         title: Text('Tidal UI'),
@@ -141,6 +142,5 @@ class _MainScreenState extends State<MainScreen> {
         ),
       ),
     );
-
   }
 }
