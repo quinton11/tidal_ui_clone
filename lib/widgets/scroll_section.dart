@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+//import 'package:provider/provider.dart';
 
 import 'package:tidal_ui/widgets/album_view.dart';
 
-import '../providers/album_data.dart';
+//import '../providers/album_data.dart';
 
 class ScrollSection extends StatelessWidget {
   final String title;
+  final albums;
   //final List<dynamic> albums;
 
-  ScrollSection({this.title});
+  ScrollSection({this.title, this.albums});
 
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
-    final albumData = Provider.of<AlbumData>(context);
-    final albums = albumData.suggestednewalbums;
 
     return Container(
       //height: 450,
