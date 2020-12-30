@@ -34,7 +34,7 @@ class AlbumData with ChangeNotifier {
     Album(
       artistes: "T9INE",
       explicit: true,
-      image: 'images/T9ine.jpg',
+      image: 'images/T9ine.png',
       mastered: true,
       title: "Fast Life Living",
     ),

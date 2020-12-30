@@ -46,6 +46,7 @@ class AlbumView extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
+                        fontSize: 16,
                       ),
                       overflow: TextOverflow.ellipsis,
                     ),
