@@ -5,11 +5,13 @@ import 'package:provider/provider.dart';
 import 'screens/Main_screen.dart';
 import 'providers/album_data.dart';
 import 'providers/track_data.dart';
+import 'providers/artist_data.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
     SystemUiOverlayStyle(
       systemNavigationBarColor: Colors.black,
+      statusBarColor: Colors.black,
     ),
   );
   runApp(MyApp());
@@ -26,7 +28,10 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (ctx) => TrackData(),
-        )
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => ArtistData(),
+        ),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',

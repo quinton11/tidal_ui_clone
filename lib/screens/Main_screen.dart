@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+//import 'package:tidal_ui/screens/explore_search_screen.dart';
 //import 'package:flutter/services.dart';
 //import 'package:custom_navigator/custom_navigation.dart';
 
@@ -12,6 +13,7 @@ import 'home_page.dart';
 import 'mycollection.dart';
 import 'videos_screen.dart';
 import 'explore_screen.dart';
+//import 'explore_search_screen.dart';
 
 //import '../utility/destination.dart';
 
@@ -36,11 +38,11 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       //extendBodyBehindAppBar: true,
-      appBar: AppBar(
+      /*appBar: AppBar(
         backgroundColor: Color.fromRGBO(0, 0, 0, 0),
         bottomOpacity: 0,
         title: Text('Tidal UI'),
-      ),
+      ),*/
       body: WillPopScope(
         onWillPop: () async {
           if (_navigatorKey.currentState.canPop()) {
@@ -76,6 +78,10 @@ class _MainScreenState extends State<MainScreen> {
                 builder = (BuildContext context) => MyCollection();
                 break;
 
+              /*case SearchScreen.namedRoute:
+                builder = (BuildContext context) => SearchScreen();
+                break;
+                */
               default:
                 throw Exception('Invalid route: ${settings.name}');
             }
