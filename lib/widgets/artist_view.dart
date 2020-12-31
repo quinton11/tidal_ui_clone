@@ -42,6 +42,7 @@ class ArtistView extends StatelessWidget {
                       height: 70,
                       width: 70,
                       decoration: BoxDecoration(
+                        shape: BoxShape.circle,
                         image: DecorationImage(
                           image: AssetImage(image),
                           fit: BoxFit.cover,
@@ -49,26 +50,19 @@ class ArtistView extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 10,
+                      width: 14,
                     ),
                     Container(
                       height: 60,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            name,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
-                            ),
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        ],
+                      alignment: Alignment.center,
+                      child: Text(
+                        name,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ),
                   ],
@@ -93,7 +87,7 @@ class ArtistView extends StatelessWidget {
               ),
               ListTile(
                 leading: Icon(
-                  Icons.favorite_outline,
+                  Icons.info_outline,
                   color: Color.fromRGBO(3, 252, 186, 1),
                   size: 30,
                 ),
