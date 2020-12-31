@@ -14,7 +14,7 @@ class TrackScrollSection extends StatelessWidget {
     return Container(
       //height: 450,
       margin: EdgeInsets.only(
-        bottom: 10,
+        bottom: 50,
       ),
       padding: EdgeInsets.all(10),
       constraints: BoxConstraints.tightForFinite(height: 400),

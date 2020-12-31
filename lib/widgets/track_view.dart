@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../custom_icons/kebab_menu_icons.dart';
+
 class TrackView extends StatelessWidget {
   final mastered;
   final explicit;
@@ -13,6 +15,7 @@ class TrackView extends StatelessWidget {
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     return Container(
+    
       child: Row(
         children: <Widget>[
           Container(
@@ -29,7 +32,7 @@ class TrackView extends StatelessWidget {
             width: 14,
           ),
           Container(
-            width: width-90,
+            width: width - 132,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -54,8 +57,8 @@ class TrackView extends StatelessWidget {
                         ),
                         SizedBox(width: 5),
                         Container(
-                          width: 12,
-                          height: 12,
+                          width: 15,
+                          height: 15,
                           padding: EdgeInsets.only(
                             top: 2,
                             left: 2,
@@ -66,7 +69,7 @@ class TrackView extends StatelessWidget {
                             'E',
                             style: TextStyle(
                                 fontFamily: "KumbhaSans",
-                                fontSize: 8,
+                                fontSize: 9,
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold),
                             textAlign: TextAlign.center,
@@ -75,7 +78,7 @@ class TrackView extends StatelessWidget {
                             borderRadius: BorderRadius.all(
                               Radius.circular(2),
                             ),
-                            color: Colors.grey[800],
+                            color: Colors.grey[900],
                           ),
                         ),
                         SizedBox(
@@ -88,13 +91,13 @@ class TrackView extends StatelessWidget {
                             left: 2,
                             right: 2,
                           ),
-                          width: 12,
-                          height: 12,
+                          width: 15,
+                          height: 15,
                           child: Text(
                             'M',
                             style: TextStyle(
                               fontFamily: "KumbhSans",
-                              fontSize: 7,
+                              fontSize: 9,
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
                             ),
@@ -120,11 +123,19 @@ class TrackView extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.grey[600],
+                    fontSize: 14
                   ),
                 ),
               ],
             ),
-          )
+          ),
+          Spacer(),
+          IconButton(
+              icon: Icon(
+                KebabMenu.kebab_vertical,
+                color: Colors.grey[500],
+              ),
+              onPressed: null)
         ],
       ),
     );
