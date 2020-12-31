@@ -83,6 +83,10 @@ flutter:
        fonts:
         - asset: icons/Radio.ttf
 
+     - family: ContactIcon
+       fonts:
+        - asset: icons/ContactIcon.ttf
+
      - family: NotoSans
        fonts:
         - asset: fonts/NotoSans-Bold.ttf
