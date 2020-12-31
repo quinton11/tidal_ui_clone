@@ -38,6 +38,7 @@ class _MainScreenState extends State<MainScreen> {
       //extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Color.fromRGBO(0, 0, 0, 0),
+        bottomOpacity: 0,
         title: Text('Tidal UI'),
       ),
       body: WillPopScope(

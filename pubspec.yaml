@@ -79,6 +79,10 @@ flutter:
        fonts:
         - asset: icons/KebabMenu.ttf
 
+     - family: Radio
+       fonts:
+        - asset: icons/Radio.ttf
+
      - family: NotoSans
        fonts:
         - asset: fonts/NotoSans-Bold.ttf

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../custom_icons/kebab_menu_icons.dart';
+//import '../custom_icons/radio_icons.dart' as rad;
 
 class TrackView extends StatelessWidget {
   final mastered;
@@ -9,13 +10,194 @@ class TrackView extends StatelessWidget {
   final artists;
   final image;
 
-  TrackView(
-      {this.mastered, this.explicit, this.trackname, this.artists, this.image});
+  TrackView({
+    this.mastered,
+    this.explicit,
+    this.trackname,
+    this.artists,
+    this.image,
+  });
+
+  void _settingbottommodalsheet(BuildContext context) {
+    showModalBottomSheet(
+      isScrollControlled: true,
+      context: context,
+      //barrierColor: Colors.black,
+
+      builder: (BuildContext ctx) {
+        return Container(
+          //height: 800,
+          decoration: BoxDecoration(
+            color: Colors.black,
+            border: Border(
+              top: BorderSide(
+                color: Colors.black,
+              ),
+            ),
+          ),
+          //color: Colors.black,
+          child: Wrap(
+            children: <Widget>[
+              Container(
+                padding: EdgeInsets.all(20),
+                child: Row(
+                  children: <Widget>[
+                    Container(
+                      height: 70,
+                      width: 70,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(image),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Container(
+                      height: 60,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Text(
+                            trackname,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                          Text(
+                            artists,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.grey[600],
+                                fontSize: 14),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Divider(
+                color: Colors.grey[800],
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.queue_play_next,
+                  color: Color.fromRGBO(3, 252, 186, 1),
+                  size: 30,
+                ),
+                title: Text(
+                  "Play Next",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                onTap: () => null,
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.favorite_outline,
+                  color: Color.fromRGBO(3, 252, 186, 1),
+                  size: 30,
+                ),
+                title: Text(
+                  "Add to My Collection",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                onTap: () => null,
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.playlist_add,
+                  color: Color.fromRGBO(3, 252, 186, 1),
+                  size: 30,
+                ),
+                title: Text(
+                  "Add to Playlist",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                onTap: () => null,
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.share_outlined,
+                  color: Color.fromRGBO(3, 252, 186, 1),
+                  size: 30,
+                ),
+                title: Text(
+                  "Share",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                onTap: () => null,
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.radio_outlined,
+                  color: Color.fromRGBO(3, 252, 186, 1),
+                  size: 30,
+                ),
+                title: Text(
+                  "Go to Track Radio",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                onTap: () => null,
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.info_outlined,
+                  color: Color.fromRGBO(3, 252, 186, 1),
+                  size: 30,
+                ),
+                title: Text(
+                  "Credits",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                onTap: () => null,
+              ),
+              ListTile(
+                leading: Icon(
+                  Icons.album_outlined,
+                  color: Color.fromRGBO(3, 252, 186, 1),
+                  size: 30,
+                ),
+                title: Text(
+                  "Go to Album",
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
+                onTap: () => null,
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
     return Container(
-    
       child: Row(
         children: <Widget>[
           Container(
@@ -44,7 +226,7 @@ class TrackView extends StatelessWidget {
                       children: <Widget>[
                         //Album Name
                         Container(
-                          width: 100,
+                          //width: 100,
                           child: Text(
                             trackname,
                             style: TextStyle(
@@ -121,21 +303,23 @@ class TrackView extends StatelessWidget {
                   artists,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey[600],
-                    fontSize: 14
-                  ),
+                      fontWeight: FontWeight.bold,
+                      color: Colors.grey[600],
+                      fontSize: 14),
                 ),
               ],
             ),
           ),
           Spacer(),
           IconButton(
-              icon: Icon(
-                KebabMenu.kebab_vertical,
-                color: Colors.grey[500],
-              ),
-              onPressed: null)
+            icon: Icon(
+              KebabMenu.kebab_vertical,
+              color: Colors.grey[500],
+            ),
+            onPressed: () {
+              _settingbottommodalsheet(context);
+            },
+          )
         ],
       ),
     );

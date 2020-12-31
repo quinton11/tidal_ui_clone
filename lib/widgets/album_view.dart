@@ -35,12 +35,13 @@ class AlbumView extends StatelessWidget {
           SizedBox(
             height: 12,
             child: Container(
+              width: 150,
               child: Row(
                 //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   //Album Name
                   Container(
-                    width: 100,
+                    width: 101,
                     child: Text(
                       albumname,
                       style: TextStyle(
