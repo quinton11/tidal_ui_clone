@@ -66,7 +66,54 @@ class ArtistData with ChangeNotifier {
     ),
   ];
 
+  List<Artist> _suggestedartists = [
+    Artist(
+      image: 'images/sza.jpg',
+      name: 'SZA',
+    ),
+    Artist(
+      image: 'images/kendrick.jpg',
+      name: 'Kendrick Lamar',
+    ),
+    Artist(
+      image: 'images/drake (2).jpg',
+      name: 'Drake',
+    ),
+    Artist(
+      image: 'images/tiller.jpg',
+      name: 'Bryson Tiller',
+    ),
+    Artist(
+      image: 'images/futurre.jpg',
+      name: 'Future',
+    ),
+    Artist(
+      image: 'images/bey.jpg',
+      name: 'Beyoncé',
+    ),
+    Artist(
+      image: 'images/guccimane.jpg',
+      name: 'Gucci Mane',
+    ),
+    Artist(
+      image: 'images/kanyee.jpg',
+      name: 'Kanye West',
+    ),
+    Artist(
+      image: 'images/eilish.jpg',
+      name: 'Billie Eilish',
+    ),
+    Artist(
+      image: 'images/hov.jpg',
+      name: 'JAY-Z',
+    ),
+  ];
+
   List<Artist> get recentsearches {
     return [..._recentsearches];
+  }
+
+  List<Artist> get suggestedartists {
+    return [..._suggestedartists];
   }
 }

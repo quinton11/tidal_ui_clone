@@ -4,10 +4,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
+import 'package:tidal_ui/custom_icons/calendar_empty_icons.dart';
 import 'package:tidal_ui/custom_icons/podcasts_icons.dart';
 import 'package:tidal_ui/custom_icons/tidal_rising_icons.dart';
 import 'package:tidal_ui/custom_icons/tidal_x_icons.dart';
 import 'package:tidal_ui/custom_icons/trophy_icon_icons.dart';
+import 'package:tidal_ui/providers/album_data.dart';
+import 'package:tidal_ui/providers/artist_data.dart';
+import 'package:tidal_ui/widgets/scroll_section.dart';
+import 'package:tidal_ui/widgets/scroll_section_artist.dart';
 import 'package:tidal_ui/widgets/scroll_section_moods.dart';
 
 import 'explore_search_screen.dart';
@@ -19,6 +24,10 @@ class ExploreScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final genreData = Provider.of<GenreData>(context);
+    final albumData = Provider.of<AlbumData>(context);
+    final pop = albumData.popularalbums;
+    final artistData = Provider.of<ArtistData>(context);
+
     return Scaffold(
       appBar: CustomAppBar(
         height: 90,
@@ -39,7 +48,7 @@ class ExploreScreen extends StatelessWidget {
                 children: <Widget>[
                   ListTile(
                     leading: Icon(
-                      Icons.calendar_view_day_outlined,
+                      CalendarEmpty.calendar_empty,
                       color: Color.fromRGBO(3, 252, 186, 1),
                     ),
                     title: Text(
@@ -52,7 +61,7 @@ class ExploreScreen extends StatelessWidget {
                   ),
                   ListTile(
                     leading: Icon(
-                      Icons.cloud_upload,
+                      TrophyIcon.trophy,
                       color: Color.fromRGBO(3, 252, 186, 1),
                     ),
                     title: Text(
@@ -102,6 +111,33 @@ class ExploreScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+                  Container(
+                    margin: EdgeInsets.only(
+                      bottom: 30,
+                    ),
+                    padding: EdgeInsets.all(
+                      10,
+                    ),
+                    child: TextButton(
+                      onPressed: null,
+                      child: Text(
+                        'Clean Content',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 17,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                  ScrollSection(
+                    albums: pop,
+                    title: 'Suggested Albums for You',
+                  ),
+                  ScrollSectionArtist(
+                    artists: artistData.suggestedartists,
+                    title: 'Suggested Artists for You',
+                  )
                 ],
               ),
             ],
