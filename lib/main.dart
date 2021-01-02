@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:tidal_ui/providers/genre_data.dart';
 
 import 'screens/Main_screen.dart';
 import 'providers/album_data.dart';
@@ -31,6 +32,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (ctx) => ArtistData(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => GenreData(),
         ),
       ],
       child: MaterialApp(

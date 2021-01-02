@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../widgets/genre_view.dart';
 
-class ScrollSectionGenre extends StatelessWidget {
+class ScrollSectionMood extends StatelessWidget {
   final String title;
   final genre;
 
-  ScrollSectionGenre({this.title, this.genre});
+  ScrollSectionMood({this.title, this.genre});
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +22,11 @@ class ScrollSectionGenre extends StatelessWidget {
 
     return Container(
       //height: 450,
-      /*margin: EdgeInsets.only(
+      margin: EdgeInsets.only(
         bottom: 10,
-      ),*/
+      ),
       padding: EdgeInsets.all(10),
-      constraints: BoxConstraints.tightForFinite(height: 270),
+      constraints: BoxConstraints.tightForFinite(height: 130),
       child: Column(
         children: <Widget>[
           Container(
@@ -34,9 +34,7 @@ class ScrollSectionGenre extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Container(
-                  margin: EdgeInsets.only(
-                    left: 10,
-                  ),
+                  margin: EdgeInsets.only(left: 10),
                   child: Text(
                     title,
                     style: TextStyle(
@@ -46,37 +44,18 @@ class ScrollSectionGenre extends StatelessWidget {
                     ),
                   ),
                 ),
-                TextButton(
-                  onPressed: null,
-                  child: Text(
-                    "View as list",
-                    style: TextStyle(
-                      color: Colors.grey[800],
-                    ),
-                  ),
-                )
               ],
             ),
           ),
           Container(
             width: width,
-            height: 190,
+            height: 90,
             child: SingleChildScrollView(
               padding: EdgeInsets.all(10),
               scrollDirection: Axis.horizontal,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              child: Row(
                 children: <Widget>[
-                  Row(
-                    children: <Widget>[
-                      ...listitem.sublist(0, 12),
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[
-                      ...listitem.sublist(12),
-                    ],
-                  ),
+                  ...listitem,
                 ],
               ),
             ),

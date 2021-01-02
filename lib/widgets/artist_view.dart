@@ -151,7 +151,7 @@ class ArtistView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //Width of row
-    final width = MediaQuery.of(context).size.width;
+    //final width = MediaQuery.of(context).size.width;
 
     return Container(
       child: Row(

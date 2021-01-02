@@ -17,7 +17,7 @@ class TrackScrollSection extends StatelessWidget {
         bottom: 50,
       ),
       padding: EdgeInsets.all(10),
-      constraints: BoxConstraints.tightForFinite(height: 400),
+      constraints: BoxConstraints.tightForFinite(height: 430),
       child: Column(
         children: <Widget>[
           Container(
@@ -48,7 +48,7 @@ class TrackScrollSection extends StatelessWidget {
             height: 10,
           ),
           Container(
-            height: 320,
+            height: 350,
             width: width,
             child: ListView.separated(
               physics: NeverScrollableScrollPhysics(),

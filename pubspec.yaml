@@ -87,6 +87,26 @@ flutter:
        fonts:
         - asset: icons/ContactIcon.ttf
 
+     - family: CalendarEmpty
+       fonts:
+        - asset: icons/CalendarEmpty.ttf
+
+     - family: Podcasts
+       fonts:
+        - asset: icons/Podcasts.ttf
+
+     - family: TidalRising
+       fonts:
+        - asset: icons/TidalRising.ttf
+
+     - family: TidalX
+       fonts:
+        - asset: icons/TidalX.ttf
+
+     - family: TrophyIcon
+       fonts:
+        - asset: icons/TrophyIcon.ttf
+
      - family: NotoSans
        fonts:
         - asset: fonts/NotoSans-Bold.ttf
