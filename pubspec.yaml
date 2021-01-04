@@ -115,6 +115,10 @@ flutter:
        fonts:
         - asset: icons/LineconsMusic.ttf
 
+     - family: TidalHome
+       fonts:
+        - asset: icons/TidalHome.ttf
+
      - family: NotoSans
        fonts:
         - asset: fonts/NotoSans-Bold.ttf

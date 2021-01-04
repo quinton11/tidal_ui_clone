@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-//import 'package:provider/provider.dart';
 
-import 'package:tidal_ui/widgets/album_view.dart';
+
 import 'package:tidal_ui/widgets/sug_artist_view.dart';
 
-//import '../providers/album_data.dart';
 
 class ScrollSectionArtist extends StatelessWidget {
   final String title;

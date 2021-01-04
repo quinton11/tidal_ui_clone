@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:tidal_ui/widgets/album_view.dart';
 
 import 'album_view.mod.dart';
 

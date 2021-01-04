@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:tidal_ui/custom_icons/tidal_home_icons.dart';
+import 'package:tidal_ui/custom_icons/tidal_icon_icons.dart';
 //import 'package:tidal_ui/screens/explore_search_screen.dart';
 //import 'package:flutter/services.dart';
 //import 'package:custom_navigator/custom_navigation.dart';
@@ -122,6 +124,7 @@ class _MainScreenState extends State<MainScreen> {
             BottomNavigationBarItem(
               icon: Icon(
                 HomeIcon.home,
+                //TidalHome.video,
               ),
               label: "Home",
               backgroundColor: Color.fromRGBO(44, 51, 49, 0),
