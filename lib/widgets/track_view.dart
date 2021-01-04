@@ -92,7 +92,7 @@ class TrackView extends StatelessWidget {
               ListTile(
                 leading: Icon(
                   Icons.queue_play_next,
-                  color: Color.fromRGBO(3, 252, 186, 1),
+                  color: Color.fromRGBO(0, 251, 247, 1),
                   size: 30,
                 ),
                 title: Text(
@@ -106,7 +106,7 @@ class TrackView extends StatelessWidget {
               ListTile(
                 leading: Icon(
                   Icons.favorite_outline,
-                  color: Color.fromRGBO(3, 252, 186, 1),
+                  color: Color.fromRGBO(0, 251, 247, 1),
                   size: 30,
                 ),
                 title: Text(
@@ -120,7 +120,7 @@ class TrackView extends StatelessWidget {
               ListTile(
                 leading: Icon(
                   Icons.playlist_add,
-                  color: Color.fromRGBO(3, 252, 186, 1),
+                  color: Color.fromRGBO(0, 251, 247, 1),
                   size: 30,
                 ),
                 title: Text(
@@ -134,7 +134,7 @@ class TrackView extends StatelessWidget {
               ListTile(
                 leading: Icon(
                   Icons.share_outlined,
-                  color: Color.fromRGBO(3, 252, 186, 1),
+                  color: Color.fromRGBO(0, 251, 247, 1),
                   size: 30,
                 ),
                 title: Text(
@@ -148,7 +148,7 @@ class TrackView extends StatelessWidget {
               ListTile(
                 leading: Icon(
                   Icons.radio_outlined,
-                  color: Color.fromRGBO(3, 252, 186, 1),
+                  color: Color.fromRGBO(0, 251, 247, 1),
                   size: 30,
                 ),
                 title: Text(
@@ -162,7 +162,7 @@ class TrackView extends StatelessWidget {
               ListTile(
                 leading: Icon(
                   Icons.info_outlined,
-                  color: Color.fromRGBO(3, 252, 186, 1),
+                  color: Color.fromRGBO(0, 251, 247, 1),
                   size: 30,
                 ),
                 title: Text(
@@ -176,7 +176,7 @@ class TrackView extends StatelessWidget {
               ListTile(
                 leading: Icon(
                   Icons.album_outlined,
-                  color: Color.fromRGBO(3, 252, 186, 1),
+                  color: Color.fromRGBO(0, 251, 247, 1),
                   size: 30,
                 ),
                 title: Text(

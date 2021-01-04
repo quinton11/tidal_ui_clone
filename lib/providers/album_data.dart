@@ -73,10 +73,7 @@ class AlbumData with ChangeNotifier {
       mastered: true,
       title: "Rare Changes",
     ),
-
   ];
-
-
 
   List<Album> _popularalbums = [
     Album(
@@ -163,8 +160,6 @@ class AlbumData with ChangeNotifier {
       title: "QUARANTINE PACK",
     ),
   ];
-
-
 
   List<Album> _inmemoriam = [
     Album(
@@ -338,6 +333,93 @@ class AlbumData with ChangeNotifier {
     ),
   ];
 
+  List<Album> _recentactivity = [
+    Album(
+      artistes: "Cam'ron",
+      explicit: true,
+      image: 'images/camron.jpg',
+      mastered: false,
+      title: 'Purple Haze',
+    ),
+    Album(
+      artistes: 'Jay Rock',
+      explicit: true,
+      image: 'images/jayrock.jpg',
+      mastered: false,
+      title: 'Redemption',
+    ),
+    Album(
+      artistes: 'Mos Def',
+      explicit: true,
+      image: 'images/mosdef.jpg',
+      mastered: false,
+      title: 'Black On Both Sides',
+    ),
+    Album(
+      artistes: 'Talib Kweli',
+      explicit: true,
+      image: 'images/talib.jpg',
+      mastered: false,
+      title: 'The Beautiful Struggle',
+    ),
+    Album(
+      artistes: 'Big Sean',
+      explicit: true,
+      image: 'images/detroit.jpg',
+      mastered: false,
+      title: 'Detroit',
+    ),
+    Album(
+      artistes: 'Stillmatic',
+      explicit: true,
+      image: 'images/stillmatic.jpg',
+      mastered: false,
+      title: 'Nas',
+    ),
+    Album(
+      artistes: 'Outkast',
+      explicit: true,
+      image: 'images/aquemini.jpg',
+      mastered: false,
+      title: 'Aquemini',
+    ),
+    Album(
+      artistes: 'Nas',
+      explicit: true,
+      image: 'images/lifeisgood.jpg',
+      mastered: false,
+      title: 'Life Is Good',
+    ),
+    Album(
+      artistes: 'Total',
+      explicit: true,
+      image: 'images/totaltotal.jpg',
+      mastered: false,
+      title: 'Total',
+    ),
+    Album(
+      artistes: 'Harry Styles',
+      explicit: true,
+      image: 'images/harrystyles.png',
+      mastered: false,
+      title: 'Harry Styles',
+    ),
+    Album(
+      artistes: 'Noname',
+      explicit: true,
+      image: 'images/telefone.jpg',
+      mastered: false,
+      title: 'Telefone',
+    ),
+    Album(
+      artistes: 'Mos Def, Talib Kweli',
+      explicit: true,
+      image: 'images/mosdeftalib.jpg',
+      mastered: false,
+      title: 'Black Star',
+    ),
+  ];
+
   List<Album> get suggestednewalbums {
     return [..._suggestednewalbums];
   }
@@ -352,5 +434,9 @@ class AlbumData with ChangeNotifier {
 
   List<Album> get newreleases {
     return [..._newreleasesforyou];
+  }
+
+  List<Album> get recentactivity {
+    return [..._recentactivity];
   }
 }

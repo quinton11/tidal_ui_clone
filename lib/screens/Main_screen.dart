@@ -112,7 +112,7 @@ class _MainScreenState extends State<MainScreen> {
             _index.insert(0, _activepageindex);
             _navigatorKey.currentState.pushNamed(_pageroutes[_activepageindex]);
           },
-          selectedItemColor: Color.fromRGBO(3, 252, 186, 1),
+          selectedItemColor: Color.fromRGBO(0, 251, 247, 1),
           unselectedItemColor: Color.fromRGBO(92, 88, 88, 1),
           currentIndex: _activepageindex,
           elevation: 8.0,

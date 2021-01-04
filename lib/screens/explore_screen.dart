@@ -49,7 +49,7 @@ class ExploreScreen extends StatelessWidget {
                   ListTile(
                     leading: Icon(
                       CalendarEmpty.calendar_empty,
-                      color: Color.fromRGBO(3, 252, 186, 1),
+                      color: Color.fromRGBO(0, 251, 247, 1),
                     ),
                     title: Text(
                       'New',
@@ -62,7 +62,7 @@ class ExploreScreen extends StatelessWidget {
                   ListTile(
                     leading: Icon(
                       TrophyIcon.trophy,
-                      color: Color.fromRGBO(3, 252, 186, 1),
+                      color: Color.fromRGBO(0, 251, 247, 1),
                     ),
                     title: Text(
                       'Top',
@@ -75,7 +75,7 @@ class ExploreScreen extends StatelessWidget {
                   ListTile(
                     leading: Icon(
                       Podcasts.podcast,
-                      color: Color.fromRGBO(3, 252, 186, 1),
+                      color: Color.fromRGBO(0, 251, 247, 1),
                     ),
                     title: Text(
                       'Shows & Podcasts',
@@ -88,7 +88,7 @@ class ExploreScreen extends StatelessWidget {
                   ListTile(
                     leading: Icon(
                       TidalRising.signature,
-                      color: Color.fromRGBO(3, 252, 186, 1),
+                      color: Color.fromRGBO(0, 251, 247, 1),
                     ),
                     title: Text(
                       'TIDAL Rising',
@@ -101,7 +101,7 @@ class ExploreScreen extends StatelessWidget {
                   ListTile(
                     leading: Icon(
                       TidalX.xing,
-                      color: Color.fromRGBO(3, 252, 186, 1),
+                      color: Color.fromRGBO(0, 251, 247, 1),
                     ),
                     title: Text(
                       'TIDAL X',

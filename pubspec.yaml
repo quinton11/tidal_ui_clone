@@ -107,6 +107,14 @@ flutter:
        fonts:
         - asset: icons/TrophyIcon.ttf
 
+     - family: ElusiveDownload
+       fonts:
+        - asset: icons/ElusiveDownload.ttf
+
+     - family: LineconsMusic
+       fonts:
+        - asset: icons/LineconsMusic.ttf
+
      - family: NotoSans
        fonts:
         - asset: fonts/NotoSans-Bold.ttf
