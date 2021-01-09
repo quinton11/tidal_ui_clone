@@ -51,7 +51,7 @@ class ScrollSectionGenre extends StatelessWidget {
                   child: Text(
                     "View as list",
                     style: TextStyle(
-                      color: Colors.grey[800],
+                      color: Colors.grey[600],
                     ),
                   ),
                 )

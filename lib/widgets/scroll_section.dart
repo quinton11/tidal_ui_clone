@@ -51,7 +51,7 @@ class ScrollSection extends StatelessWidget {
                   child: Text(
                     "View all",
                     style: TextStyle(
-                      color: Colors.grey[800],
+                      color: Colors.grey[600],
                     ),
                   ),
                 )
