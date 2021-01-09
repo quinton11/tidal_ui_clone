@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tidal_ui/screens/explore_screen.dart';
 
 import 'track_view.dart';
 
@@ -6,7 +7,10 @@ class TrackScrollSection extends StatelessWidget {
   final String title;
   final tracks;
 
-  TrackScrollSection({this.title, this.tracks});
+  TrackScrollSection({
+    this.title,
+    this.tracks,
+  });
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -33,7 +37,17 @@ class TrackScrollSection extends StatelessWidget {
                   ),
                 ),
                 TextButton(
-                  onPressed: null,
+                  autofocus: false,
+                  clipBehavior: Clip.none,
+                  onPressed: () => Navigator.push(
+                    context,
+                    FadeRoute(
+                      page: TrackListScreen(
+                        title: title,
+                        tracks: tracks,
+                      ),
+                    ),
+                  ),
                   child: Text(
                     "View all",
                     style: TextStyle(
@@ -66,6 +80,56 @@ class TrackScrollSection extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class TrackListScreen extends StatelessWidget {
+  final title;
+  final tracks;
+
+  TrackListScreen({
+    this.title,
+    this.tracks,
+  });
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        automaticallyImplyLeading: false,
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+          onPressed: () => Navigator.pop(context),
+        ),
+        title: Text(
+          title,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 30,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+      body: Container(
+        padding: EdgeInsets.all(10),
+        color: Colors.black,
+        child: ListView.separated(
+            itemBuilder: (ctx, index) => TrackView(
+                  artists: tracks[index].artists,
+                  explicit: true,
+                  image: tracks[index].image,
+                  mastered: true,
+                  trackname: tracks[index].title,
+                ),
+            separatorBuilder: (ctx, index) => SizedBox(
+                  height: 15,
+                ),
+            itemCount: tracks.length),
       ),
     );
   }
